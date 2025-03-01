@@ -34,4 +34,13 @@ public class NPC {
     public void setDamage(int damage) {
         this.damage = damage;
     }
+
+    @Override
+    public String toString() {
+        return "NPC{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", damage=" + damage +
+                '}';
+    }
 }

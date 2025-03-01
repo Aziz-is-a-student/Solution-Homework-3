@@ -2,28 +2,24 @@ package Assignment1;
 
 public class Room {
     private String name;
-    private int capacity;
+
     private String description;
-    public Room(String name, int capacity,String description) {
+    public Room(String name,String description) {
         this.name = name;
-        this.capacity = capacity;
+
         this.description = description;
 
     }
     public String getName() {
         return name;
     }
-    public int getCapacity() {
-        return capacity;
-    }
+
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
+
 
     public String getDescription() {
         return description;
@@ -31,5 +27,13 @@ public class Room {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
