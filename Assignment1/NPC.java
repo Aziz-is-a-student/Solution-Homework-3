@@ -1,15 +1,20 @@
 package Assignment1;
 
 public class NPC {
-    private String name;
-    private String description;
-    private int damage;
+    private String name; // Имя NPC
+    private String description; // Описание NPC
+    private int damage;// Урон, который наносит NPC
 
+
+    // Конструктор для создания NPС
     public NPC(String name, String description, int damage) {
         this.name = name;
         this.description = description;
         this.damage = damage;
     }
+
+
+    //Геттеры и сеттеры
 
     public String getName() {
         return name;
@@ -34,7 +39,7 @@ public class NPC {
     public void setDamage(int damage) {
         this.damage = damage;
     }
-
+    //Переопределение метода toString() для удобной проверки работаспосообности кода в дальнейшем
     @Override
     public String toString() {
         return "NPC{" +

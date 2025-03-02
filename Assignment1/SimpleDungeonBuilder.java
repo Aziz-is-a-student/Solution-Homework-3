@@ -2,13 +2,14 @@ package Assignment1;
 
 import java.util.ArrayList;
 import java.util.List;
+//Создание простого подземелья для примера
+public class SimpleDungeonBuilder implements IDungeonBuilder {
+    private String name;               // Название подземелья
+    private ArrayList<Room> rooms = new ArrayList<>();    // Список комнат
+    private ArrayList<NPC> npcs = new ArrayList<>();      // Список NPC
+    private ArrayList<Trap> traps = new ArrayList<>();    // Список ловушек
 
-public class SimpleDungeonBuilder implements IDungeonBuilder{
-    private String name;
-    private ArrayList<Room> rooms = new ArrayList<>();
-    private ArrayList<NPC> npcs = new ArrayList<>();
-    private ArrayList<Trap> traps = new ArrayList<>();
-
+    //Создание подземелья используя паттерн builder
     public IDungeonBuilder setDungeonName(String name) {
         this.name = name;
         return this;

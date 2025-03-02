@@ -1,9 +1,10 @@
 package Assignment2;
+public class Room implements CloneableGameEntity {
+    private String name;        // Название комнаты
+    private int floor;          // Этаж, на котором находится комната
+    private String description; // Описание комнаты
 
-public class Room implements CloneableGameEntity{
-    private String name;
-    private int floor;
-    private String description;
+    // Конструктор для создания комнаты
 
     public Room(String name, int floor, String description) {
         this.name = name;
@@ -11,11 +12,13 @@ public class Room implements CloneableGameEntity{
         this.description = description;
     }
 
+    // Реализация метода клонирования. Создаёт новый объект Room с теми же параметрами.
     @Override
     public Room cloneEntity() {
         return new Room(this.name,this.floor,this.description);
     }
 
+    // Геттеры и сеттеры
     public String getName() {
         return name;
     }
@@ -39,7 +42,7 @@ public class Room implements CloneableGameEntity{
     public void setDescription(String description) {
         this.description = description;
     }
-
+    //Переопределение метода toString() для вывода информации о комнате
     @Override
     public String toString() {
         return "Room{" +
